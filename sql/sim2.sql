@@ -41,5 +41,17 @@ INSERT INTO `superadmin` (`id`, `nama`, `email`, `password`, `pass`, `level`) VA
 (1, 'Admin IT', 'agung.dc@globalnine-indonesia.com', 'e59cd3ce33a68f536c19fedb82a7936f', 'agungdc', '61646D696E');
 -----------------------------------------------------------------------------------------------------------------
 
+CREATE TABLE `user` (
+	`id` int(11) NOT NULL,
+	`nik` varchar(10) NOT NULL,
+	`nm_dpn` varchar(30) NOT NULL,
+	`nm_blk` varchar(30) NOT NULL,
+	`password` text NOT NULL,
+	`pass` text NOT NULL,
+	`jbtn` varchar(20) NOT NULL,
+	`email` text NOT NULL,
+	`tlp` varchar(12) NOT NULL,
+	`level` varchar(2) NOT NULL	
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --Keterangan 'id' semua menggunakan autoincrement

@@ -41,12 +41,12 @@ if( ! isset($_SESSION['email'])){
 						  <div class="col-md-6">
 							<div class="form-group">
 								<label>NIK</label>
-								<input type="text" name="id" value="<?php echo uniqid(); ?>" hidden> <!--id Unik Memanipulasi SQL Injection---->
-								<input type="text" class="form-control" id="nik" placeholder="NIK">
+								<input type="text" class="form-control" name="id" hidden>
+								<input type="text" class="form-control" name="nik" placeholder="NIK">
 							</div>
 							<div class="form-group">
 								<label>Nama Depan</label>
-								<input type="text" class="form-control" id="nm_dpn" placeholder="Depan">
+								<input type="text" class="form-control" name="nm_dpn" placeholder="Depan">
 							</div>
 							<div class="form-group">
 								<label>Password</label>
@@ -57,16 +57,20 @@ if( ! isset($_SESSION['email'])){
 									</div>
 								  </div>
 							</div>
+							<div class="form-group">
+								<label>Jabatan</label>
+								<input type="text" class="form-control" name="jbtn" placeholder="Jabatan">
+							</div>
 						  </div>
 						  <!-- /.col -->
 						  <div class="col-md-6">
 							<div class="form-group">
 								<label>Email</label>
-								<input type="text" class="form-control" id="email" placeholder="Email">
+								<input type="text" class="form-control" name="email" placeholder="Email">
 							</div>
 							<div class="form-group">
 								<label>Nama Belakang</label>
-								<input type="text" class="form-control" id="nm_blk" placeholder="Belakang">
+								<input type="text" class="form-control" name="nm_blk" placeholder="Belakang">
 							</div>
 							<div class="form-group">
 								<label>rePassword</label>
@@ -77,11 +81,13 @@ if( ! isset($_SESSION['email'])){
 									</div>
 								  </div>
 							</div>
+							<div class="form-group">
+								<label>Telepone</label>
+								<input type="number" name="tlp" class="form-control" placeholder="+62">
+								  <div class="input-group-append">
+								  </div>
+							</div>
 						  </div>
-					  </div>
-					  <div class="form-group">
-						<label>Jabatan</label>
-						<input type="text" class="form-control" id="jabatan" placeholder="Jabatan">
 					  </div>
 					 <div class="card card-warning">
 					 <div class="card-header">
@@ -89,31 +95,43 @@ if( ! isset($_SESSION['email'])){
 					 </div>
 					 </div>
 					<div class="icheck-primary d-inline">
-						<input type="radio" id="radioPrimary1" name="level" value="1">
-						<label for="radioPrimary1"> Inventory</label>
+						<input type="radio" id="radioPrimary1" name="level" value="2">
+						<label for="radioPrimary1"> Direksi</label>
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="icheck-primary d-inline">
-						<input type="radio" id="radioPrimary2" name="level" value="2">
-						<label for="radioPrimary1"> Sales User</label>
+						<input type="radio" id="radioPrimary2" name="level" value="3">
+						<label for="radioPrimary1"> HRD</label>
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="icheck-primary d-inline">
-						<input type="radio" id="radioPrimary3" name="level" value="3">
-						<label for="radioPrimary1"> Sales Approve</label>
+						<input type="radio" id="radioPrimary3" name="level" value="4">
+						<label for="radioPrimary1"> Sales</label>
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="icheck-primary d-inline">
-						<input type="radio" id="radioPrimary4" name="level" value="4">
+						<input type="radio" id="radioPrimary3" name="level" value="5">
+						<label for="radioPrimary1"> Sales Admin</label>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="icheck-primary d-inline">
+						<input type="radio" id="radioPrimary4" name="level" value="6">
+						<label for="radioPrimary1"> Purchasing</label>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="icheck-primary d-inline">
+						<input type="radio" id="radioPrimary4" name="level" value="7">
+						<label for="radioPrimary1"> Warehouse</label>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="icheck-primary d-inline">
+						<input type="radio" id="radioPrimary4" name="level" value="8">
+						<label for="radioPrimary1"> Head. Engg</label>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="icheck-primary d-inline">
+						<input type="radio" id="radioPrimary4" name="level" value="9">
 						<label for="radioPrimary1"> Engineering</label>
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<div class="icheck-primary d-inline">
-						<input type="radio" id="radioPrimary4" name="level" value="5">
-						<label for="radioPrimary1"> HRD & GA</label>
-                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<div class="icheck-primary d-inline">
-						<input type="radio" id="radioPrimary5" name="level" value="6">
+						<input type="radio" id="radioPrimary5" name="level" value="10">
 						<label for="radioPrimary1"> User</label>
                     </div>
 					<div class="card-footer">
-					  <button type="submit" class="btn btn-primary">Submit</button>
+					  <button type="submit" name="save" class="btn btn-primary">Submit</button>
 					</div>
               </div>
               </form>

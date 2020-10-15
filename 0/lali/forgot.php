@@ -33,7 +33,7 @@
         </div>	
         <div class="row">
           <div class="col-6">
-		  <a href="login">
+		  <a href="../login">
             <button type="button" class="btn btn-danger btn-block"><span class="fas fa-backspace"></span>&nbsp;&nbsp;Back</button>
           	<br>		
 		  </div>
