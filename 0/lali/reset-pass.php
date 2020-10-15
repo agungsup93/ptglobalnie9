@@ -2,9 +2,9 @@
 include "../../koneksi.php";
 require '../vendor/autoload.php';
 if(isset($_POST["reset_pass"])){
-    $emailTo = $_POST["email"]; 								//email kamu atau email penerima link reset
-    $code = uniqid(true); 										//Untuk kode atau parameter acak
-    $query = mysqli_query($koneksi, "INSERT INTO reset_password VALUES ('','$emailTo','$code')");
+    $emailTo 	= $_POST["email"]; 										//email kamu atau email penerima link reset
+    $code 		= uniqid(true); 										//Untuk kode atau parameter acak
+    $query 		= mysqli_query($koneksi, "INSERT INTO reset_password VALUES ('','$emailTo','$code')");
     if($query){
 		$mail = new PHPMailer\PHPMailer\PHPMailer();                            // Passing `true` enables exceptions
 
